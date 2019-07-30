@@ -1,7 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# A Demo about React Internationalization using react-i18next
+
+## Comparison with react-intl
+
+|  | react-intl | react-i18next  |
+| --- | --- | --- |
+| github page | github.com/formatjs/react-intl | github.com/i18next/react-i18next |
+| stars | 10k+ | 3.5k+ |
+| size | 12.6kb minified | 33kb minified and 9kb gzipped |
+| react version |  | latest version need react >= 16.8.0 |
+| server side | ☑️ | ☑️ |
+| Plurals | ☑️ | ☑️ |
+| Interpolation | ☑️ | ☑️ |
+| Formatting | ☑️ | ☑️ |
+| Nesting |  | ☑️ |
+| Context |  | ☑️ |
+| NameSpaces |  | ☑️ |
+| Fallback | ☑️ | ☑️ |
+
+### Conclusion
+
+react-i18next is bigger and more complicated, but it is more powerful. Actually, react-intl is a formatting tool, while react-i18next is an internationalization tool, using the i18next i18n ecosystem
 
 ## Available Scripts
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 In the project directory, you can run:
 
 ### `npm start`
