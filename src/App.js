@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {
+  Suspense
+} from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
+import logo from './logo.svg';
+import Home from './pages/Home';
+import About from './pages/About';
+import Topics from './pages/Topics';
+import Header from './components/Header';
+
+function Page() {
+  return (
+    <Router>
+      <Header />
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/topics" component={Topics} />
+    </Router>
+  )
+}
+
+// loading component for suspense fallback
+const Loader = () => (
+  <div className="App">
+    <img src={logo} className="App-logo" alt="logo" />
+    <div>loading...</div>
+  </div>
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Page />
+    </Suspense>
   );
 }
 
