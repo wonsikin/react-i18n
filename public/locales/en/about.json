@@ -1,3 +1,4 @@
 {
-  "title": "this is the about page"
+  "title": "this is the about page",
+  "I.AM": "I am {{name}}"
 }
